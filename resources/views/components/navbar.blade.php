@@ -1,6 +1,6 @@
 <nav class="w-full fixed top-0 left-0 z-50 bg-white">
     <div class="max-w-7xl m-auto py-4 px-4 flex items-center justify-between">
-        <a class="gaming flex items-center" href="{{ route('home') }}"><img width="45" src="{{ asset('assets/images/epic_logo.png') }}" alt="Kingpin Image"> <span class="ml-3 text-2xl">Epic<span class="text-main">Battles</span></span></a>
+        <a class="gaming flex items-center" href="{{ route('home') }}"><img width="45" src="{{ asset('/storage/'.$activeLogo->image) }}" alt="Kingpin Image"> <span class="ml-3 text-2xl">Epic<span class="text-main">Battles</span></span></a>
 
         <ul class="flex items-center font-semibold">
             <a class="ml-6" href="{{ route('home') }}">Home</a>

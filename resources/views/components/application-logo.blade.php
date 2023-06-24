@@ -1,1 +1,1 @@
-<img src="{{ asset('assets/images/epic_logo.png') }}" width="55px" alt="Kingpin Logo">
+<img src="{{ asset('/storage/'.$activeLogo->image) }}" width="55px" alt="Kingpin Logo">
