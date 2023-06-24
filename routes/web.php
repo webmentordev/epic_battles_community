@@ -12,6 +12,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/stats', [StatsController::class, 'index'])->name('stats');
+Route::get('/servers', [ServerController::class, 'show'])->name('show.servers');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

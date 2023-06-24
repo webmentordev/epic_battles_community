@@ -5,6 +5,7 @@
         <ul class="flex items-center font-semibold">
             <a class="ml-6" href="{{ route('home') }}">Home</a>
             <a class="ml-6" href="{{ route('stats') }}">Stats</a>
+            <a class="ml-6" href="{{ route('show.servers') }}">Servers</a>
             <a class="ml-6" href="https://epicbattles.tip4serv.com" rel="nofollow" target="_blank">Store</a>
             @guest
                 <a class="px-5 ml-3 border-r border-gray-200" href="{{ route('login') }}">Login</a>

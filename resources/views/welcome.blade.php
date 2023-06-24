@@ -9,7 +9,7 @@
             <ul class="flex items-center m-auto">
                 <a href="https://epicbattles.tip4serv.com/" rel="nofollow" target="_blank" class="bg-main hover:bg-dark transition-all text-white py-3 px-5"><span>Store</span></a>
                 <a href="https://discord.gg/2AUZUeE7" rel="nofollow" target="_blank" class="bg-main hover:bg-dark transition-all ml-3 text-white py-3 px-5"><span>Discord</span></a>
-                <a href="steam://connect/148.251.54.69:28090" rel="nofollow" target="_blank" class="bg-main hover:bg-dark transition-all ml-3 text-white py-3 px-5"><span>Connect</span></a>
+                <a href="{{ route('show.servers') }}" class="bg-main hover:bg-dark transition-all ml-3 text-white py-3 px-5"><span>Servers</span></a>
             </ul>
         </div>
     </header>

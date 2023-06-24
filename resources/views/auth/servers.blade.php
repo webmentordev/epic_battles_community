@@ -12,6 +12,11 @@
                     <form action="{{ route('servers') }}" method="POST" class="mb-6">
                         @csrf
                         <p class="mb-6 p-6 border-l-4 border-blue-600 bg-blue-100">Get your server id from the Battlematrics. Go to <a class="underline text-blue-500 font-semibold" href="https://www.battlemetrics.com/servers">Battlematrics</a>, search for your server with name. After you find it, click the server and copy the ID from the URL Bar and use it as server id. ID will be the last numbers after /.</p>
+
+                        @if (session('success'))
+                            <p class="mb-6 p-6 border-l-4 border-green-600 bg-green-100 w-fit">{{ session('success') }}</p>
+                        @endif
+
                         <div class="flex items-center">
                             <div class="ml-3 w-full">
                                 <x-input-label for="name" :value="__('Server Name')" />
@@ -30,6 +35,9 @@
                                                 required />
                                 <x-input-error :messages="$errors->get('server_id')" class="mt-2" />
                             </div>
+                            <x-primary-button class="mt-6 ml-3">
+                                {{ __('Create') }}
+                            </x-primary-button>
                         </div>
                     </form>
                     
