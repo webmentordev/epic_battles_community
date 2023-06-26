@@ -11,11 +11,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/stats', [StatsController::class, 'index'])->name('stats');
+Route::get('/discord', function(){
+    return redirect('https://discord.gg/2AUZUeE7');
+});
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'is_admin', 'verified'])->name('dashboard');
+// Route::get('/stats', [StatsController::class, 'index'])->name('stats');
 Route::get('/servers', [ServerController::class, 'show'])->name('show.servers');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
